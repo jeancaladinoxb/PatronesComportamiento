@@ -6,10 +6,10 @@ public class SolicitudMedica {
     private int fechaSolicitud;
     private int edadPaciente;
     private int nivelComplejidad;
-    private double costoEstimado;
+    private int costoEstimado;
 
 
-    public SolicitudMedica(String nombrePaciente,int fechaSolicitud, int edadPaciente, int nivelComplejidad, double costoEstimado) {
+    public SolicitudMedica(String nombrePaciente,int fechaSolicitud, int edadPaciente, int nivelComplejidad, int costoEstimado) {
         this.nombrePaciente = nombrePaciente;
         this.fechaSolicitud = fechaSolicitud;
         this.edadPaciente = edadPaciente;
@@ -29,7 +29,7 @@ public class SolicitudMedica {
         return nivelComplejidad;
     }
 
-    public double getCostoEstimado() {
+    public int getCostoEstimado() {
         return costoEstimado;
     }
 }
