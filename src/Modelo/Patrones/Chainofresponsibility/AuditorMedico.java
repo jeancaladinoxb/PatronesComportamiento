@@ -11,7 +11,7 @@ public class AuditorMedico extends BaseHandler {
 
             System.out.println("Solicitud manejada por Auditor Medico, revise nuestra plataforma para consultar estado de solicitud");
         }else{
-            System.out.println("La solicitud será enviada para la directiva medica con fin de aprobación o rechazo");
+            System.out.println("La solicitud será enviada para la directiva medica con fin de aprobación o rechazo jajajaja");
 
             super.handle(solicitud);
         }
