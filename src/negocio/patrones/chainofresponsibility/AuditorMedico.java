@@ -1,5 +1,5 @@
-package Modelo.Patrones.Chainofresponsibility;
-import Modelo.entidades.*;
+package negocio.patrones.chainofresponsibility;
+import datos.entidades.*;
 
 public class AuditorMedico extends BaseHandler {
 

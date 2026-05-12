@@ -1,6 +1,6 @@
-package Modelo.Patrones.Chainofresponsibility;
+package negocio.patrones.chainofresponsibility;
 
-import Modelo.entidades.SolicitudMedica;
+import datos.entidades.SolicitudMedica;
 
 public class DirectorMedico extends BaseHandler{
 

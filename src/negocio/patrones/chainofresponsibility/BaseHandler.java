@@ -1,5 +1,5 @@
-package Modelo.Patrones.Chainofresponsibility;
-import Modelo.entidades.SolicitudMedica;
+package negocio.patrones.chainofresponsibility;
+import datos.entidades.SolicitudMedica;
 
 
     public abstract class BaseHandler implements Handler{

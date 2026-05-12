@@ -1,4 +1,4 @@
-package Modelo.entidades;
+package datos.entidades;
 
 public class SolicitudMedica {
 
