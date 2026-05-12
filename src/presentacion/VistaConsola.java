@@ -2,6 +2,7 @@ package presentacion;
 
 import datos.entidades.SolicitudMedica;
 import datos.entidades.IPS;
+import datos.entidades.Empleado;
 import datos.iterador.Iterador;
 import java.util.Scanner;
 
@@ -54,5 +55,35 @@ public class VistaConsola {
             System.out.println("- " + sede.getNombre() + " | " + sede.getDireccion() + " (" + sede.getEspecialidad() + ")");
         }
         System.out.println("---------------------------------");
+    }
+
+    public boolean preguntarSiProcesarNomina() {
+        System.out.println("\n¿Desea acceder al módulo de Recursos Humanos para generar un pago? (S/N): ");
+        String respuesta = sc.nextLine();
+        return respuesta.trim().equalsIgnoreCase("S");
+    }
+
+    public Empleado pedirDatosEmpleado() {
+        System.out.println("\n--- Módulo de Nómina ---");
+        System.out.println("Ingrese el nombre del empleado: ");
+        String nombre = sc.nextLine();
+        
+        System.out.println("Ingrese la identificación: ");
+        String identificacion = sc.nextLine();
+        
+        System.out.println("Ingrese el salario base: ");
+        double salarioBase = sc.nextDouble();
+        sc.nextLine(); // Limpiar buffer
+        
+        return new Empleado(nombre, identificacion, salarioBase);
+    }
+
+    public int pedirTipoContrato() {
+        System.out.println("Seleccione el tipo de contrato:");
+        System.out.println("1. Administrativo (Deducción salud y pensión)");
+        System.out.println("2. Médico Contratista (Retención en la fuente)");
+        int opcion = sc.nextInt();
+        sc.nextLine(); // Limpiar buffer
+        return opcion;
     }
 }
