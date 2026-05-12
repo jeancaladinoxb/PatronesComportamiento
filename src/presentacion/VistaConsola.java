@@ -1,6 +1,8 @@
 package presentacion;
 
 import datos.entidades.SolicitudMedica;
+import datos.entidades.IPS;
+import datos.iterador.Iterador;
 import java.util.Scanner;
 
 public class VistaConsola {
@@ -37,5 +39,20 @@ public class VistaConsola {
 
     public void mostrarInicioProceso() {
         System.out.println("\n>>> Iniciando proceso de autorización...");
+    }
+
+    public boolean preguntarSiVerSedes() {
+        System.out.println("\n¿Desea ver el directorio de sedes de la EPS? (S/N): ");
+        String respuesta = sc.nextLine();
+        return respuesta.trim().equalsIgnoreCase("S");
+    }
+
+    public void mostrarSedesIPS(Iterador iterador) {
+        System.out.println("\n--- Directorio de Sedes (IPS) ---");
+        while (iterador.tieneSiguiente()) {
+            IPS sede = (IPS) iterador.siguiente();
+            System.out.println("- " + sede.getNombre() + " | " + sede.getDireccion() + " (" + sede.getEspecialidad() + ")");
+        }
+        System.out.println("---------------------------------");
     }
 }
