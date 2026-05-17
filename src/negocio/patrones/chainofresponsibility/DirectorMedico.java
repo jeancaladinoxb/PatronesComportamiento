@@ -2,7 +2,7 @@ package negocio.patrones.chainofresponsibility;
 
 import datos.entidades.SolicitudMedica;
 
-public class DirectorMedico extends BaseHandler{
+public class DirectorMedico extends BaseHandler {
 
     @Override
 

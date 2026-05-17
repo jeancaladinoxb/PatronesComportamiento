@@ -2,7 +2,7 @@ package negocio.patrones.chainofresponsibility;
 import datos.entidades.SolicitudMedica;
 
 
-    public abstract class BaseHandler implements Handler{
+public abstract class BaseHandler implements Handler {
 
         protected Handler siguienteAprobado;
 

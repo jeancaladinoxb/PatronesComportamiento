@@ -1,7 +1,7 @@
 package negocio.patrones.chainofresponsibility;
-import datos.entidades.*;
+import datos.entidades.SolicitudMedica;
 
-public class AuditorIA extends BaseHandler{
+public class AuditorIA extends BaseHandler {
 
     @Override
 

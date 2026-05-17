@@ -25,7 +25,7 @@ public class Main {
         if (vista.preguntarSiProcesarNomina()) {
             Empleado empleado = vista.pedirDatosEmpleado();
             int tipoContrato = vista.pedirTipoContrato();
-            
+
             RecursosHumanosService rrhhService = new RecursosHumanosService();
             rrhhService.generarPago(empleado, tipoContrato);
         }
