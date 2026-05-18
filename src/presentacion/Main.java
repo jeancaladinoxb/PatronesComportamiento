@@ -30,8 +30,16 @@ public class Main {
             rrhhService.generarPago(empleado, tipoContrato);
         }
 
-        // 4. Ejecutamos la lógica (Capa de Negocio - Patrón Chain of Responsibility)
         vista.mostrarInicioProceso();
+
+        miSolicitud.procesar();
+
+        // Se ejecuta tu Cadena de Responsabilidad (AuditorIA -> AuditorMedico -> DirectorMedico)
         servicio.procesarSolicitud(miSolicitud);
+
+        // Consultamos en qué estado terminó la solicitud después de toda la evaluación
+        System.out.println("\n[SISTEMA] Evaluación concluida.");
+        System.out.println("El estado definitivo de la solicitud es: "
+                + miSolicitud.getEstadoActual().getClass().getSimpleName());
     }
 }
